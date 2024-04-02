@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Kopelowitz Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f3d827243.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hey, I'm <span>Matt<br>Kopelowitz</span></h1>
+        </div>
+    </div>
+</div>
+
+<!-------------------about------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am originally from San Diego, CA but am currently living in Gainesville, FL at the University of Florida pursuing my degree in Computer Science. Growing up I was always interested in technology and what could be done with it. This compelled me to buy my frist computer. Later, I began taking classes in video and film and other technical classes such as programming and computer science. This is when I learned that I wanted to get my degree in computer science and eventually go into cyber security.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span></li>
+                        <li><span>C++</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>C#</span></li>
+                        <li><span>HTML/CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                        <li><span>Basic Linux/Unix</span></li>
+                        <li><span>Git</span></li>
+                        <li><span>Photoshop</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Technical Intern - Olaes Enterprises/TZilla</span><br>Worked on internet-based company’s new website and computer-related projects<br>Promoted to Technological Design Coordinator after the internship</li>
+                        <li><span>Engineering Intern - Accutek Packaging Engineering</span><br>Learned how to design parts for machines using CAD software</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.S. Computer Science Engineering</span><br>University of Florida<br>December 2023</li>
+                        <li><span>Minor in Digital Arts and Sciences</span><br>University of Florida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------------Portfolio-------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/project-1.png">
+                <div class="layer">
+                    <h3>Gridiron Insights</h3>
+                    <p>Developed a program that creates a data structure and analyzes it using sorting algorithms to display user preferences for NFL games</p>
+                    <a href="https://github.com/mattkopelowitz/GridironInsights"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/project-2.png">
+                <div class="layer">
+                    <h3>PLC Programming Language</h3>
+                    <p>Designed and programmed a complete programming language in Java which included a lexer, parser, interpreter, analyzer, and generator</p>
+                    <a href="https://github.com/mattkopelowitz/PLC_Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/project-3.png">
+                <div class="layer">
+                    <h3>Minesweeper Clone</h3>
+                    <p>Built and programmed a replica of the classic game “Minesweeper” using C++</p>
+                    <a href="https://github.com/mattkopelowitz/Minesweeper"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2023 Matthew Kopelowitz</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
