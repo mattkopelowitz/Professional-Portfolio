@@ -31,6 +31,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0px;
+    width: 80%;
+    background-color: black;
+    padding-bottom: 3px;
 }
 
 .logo {
